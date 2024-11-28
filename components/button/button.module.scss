@@ -1,0 +1,138 @@
+@import "styles/mixins";
+
+.btn {
+  --transition: 0.25s var(--cubic);
+  --border-width: 1px;
+  --color: var(--primary);
+  --bg-color: rgba(var(--body-rgb), 0.65);
+  --height: 3.5em;
+  transition: border-color var(--transition), color var(--transition);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+  height: var(--height);
+  font-size: calc(11px + 2 * (100vw - 320px) / 1080);
+  padding: 0 0.75em;
+  border-top: var(--border-width) solid var(--color);
+  border-bottom: var(--border-width) solid var(--color);
+  white-space: nowrap;
+  margin: 0 calc(var(--height) / 1.75);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--color);
+  cursor: pointer;
+  @include user-select;
+
+  &.reverse {
+    transform: scaleX(-1);
+    flex-direction: row-reverse;
+
+    span {
+      transform: scaleX(-1);
+    }
+
+    svg {
+      transform: scaleX(-1);
+    }
+  }
+
+  &.secondary {
+    --color: var(--secondary);
+  }
+
+  span {
+    top: 0.05em;
+    left: 0.1em;
+  }
+
+  strong {
+    top: 0.05em;
+  }
+
+  &::after {
+    transition: opacity var(--transition);
+    content: "";
+    position: absolute;
+    inset: 30% -10%;
+    background-color: var(--color);
+    border-radius: 50%;
+    pointer-events: none;
+    @include blur(16px);
+  }
+
+  &[data-icon] {
+    gap: 0.5em;
+    justify-content: space-between;
+  }
+}
+
+.left,
+.right {
+  position: absolute;
+  height: calc(100% + var(--border-width) * 2);
+  top: calc(-1 * var(--border-width));
+  width: calc(var(--height) + 3px);
+  overflow: hidden;
+  pointer-events: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: auto;
+    background-color: var(--bg-color);
+  }
+
+  &::before {
+    transition: border-color var(--transition);
+    width: 2.75em;
+    height: 110%;
+    transform: rotate(var(--angle-reverse));
+  }
+
+  &::after {
+    transition: background-color var(--transition);
+    height: var(--border-width);
+    width: 45%;
+    background-color: var(--color);
+    z-index: 5;
+  }
+}
+
+.left {
+  right: 100%;
+
+  &::before {
+    border-top: var(--border-width) solid var(--color);
+    border-left: var(--border-width) solid var(--color);
+    bottom: calc(-1 * var(--border-width));
+    left: 100%;
+    transform-origin: bottom left;
+    border-top-left-radius: var(--angle-radius);
+  }
+
+  &::after {
+    top: 0;
+    right: 0;
+  }
+}
+
+.right {
+  left: 100%;
+
+  &::before {
+    border-bottom: var(--border-width) solid var(--color);
+    border-right: var(--border-width) solid var(--color);
+    top: calc(-1 * var(--border-width));
+    right: 100%;
+    transform-origin: top right;
+    border-bottom-right-radius: var(--angle-radius);
+  }
+
+  &::after {
+    bottom: 0;
+    left: 0;
+  }
+}

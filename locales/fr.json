@@ -1,0 +1,150 @@
+{
+  "All": {
+    "login": "Connexion"
+  },
+  "Seo": {
+    "Home": {
+      "title": "Serveur RP GTA V Nouvelle Ère | Communauté RP 100% Custom",
+      "description": "Rejoignez le premier serveur RP GTA V français dédié aux joueurs. Scripts customs, communauté respectueuse et développeurs expérimentés vous attendent pour une expérience RP unique."
+    }
+  },
+  "Footer": {
+    "copyright": "Tous droits réservés.",
+    "approuve": "{name} n'est pas approuvé ou sponsorisé par Rockstar Games."
+  },
+  "Home": {
+    "Hero": {
+      "sub": "Serveur rôleplay GTA V",
+      "title": {
+        "line1": "Nouvelle",
+        "line2": "ère",
+        "line3": "GTA"
+      },
+      "discover": "Découvrir",
+      "join": "Nous rejoindre"
+    },
+    "Words": {
+      "line": "AMOUR GTA ACTION GANG CRIME BRAQUAGE SXXE TRAHISON POUVOIR VICE CITY MEURTRE LOS SANTOS GLOIRE HUMOUR"
+    },
+    "Services": {
+      "sub": "Communautaire",
+      "title": {
+        "line1": "Le premier",
+        "line2": "Serveur RP",
+        "line3": "au service des joueurs"
+      },
+      "list": {
+        "card1": {
+          "sub": "Scripts",
+          "title": "Des scripts <strong>100% Customs</strong>",
+          "desc": "Profitez d'une expérience unique grâce à nos scripts développés sur mesure. De la gestion d'entreprise aux missions spéciales, chaque aspect du jeu a été pensé pour enrichir votre aventure RP."
+        },
+        "card2": {
+          "sub": "Idées",
+          "title": "Votre serveur <strong>vos idées</strong>",
+          "desc": "Chez Echo FA, votre voix compte. Nous encourageons activement la communauté à partager ses idées et suggestions pour faire évoluer le serveur. Votre créativité façonne notre univers."
+        },
+        "card3": {
+          "sub": "Développement",
+          "title": "Des développeurs <strong>expérimentés</strong>",
+          "desc": "Notre équipe de développeurs chevronnés assure une stabilité optimale et une innovation constante. Leur expertise garantit une expérience de jeu fluide et des mises à jour régulières."
+        },
+        "card4": {
+          "sub": "Respect",
+          "title": "Des joueurs <strong>respectueux</strong>",
+          "desc": "Rejoignez une communauté bienveillante où le respect est la règle d'or. Nos joueurs partagent les mêmes valeurs : entraide, fair-play et immersion RP de qualité."
+        }
+      }
+    },
+    "About": {
+      "sub": "À propos de nous",
+      "title": {
+        "line1": "Qui",
+        "line2": "sommes",
+        "line3": "nous?"
+      },
+      "p1": "Echo FA est né de la passion de joueurs et développeurs désireux de créer une expérience RP unique sur GTA V. Notre serveur se démarque par ses scripts entièrement personnalisés et une approche communautaire où chaque joueur peut contribuer à l'évolution de l'univers.",
+      "p2": "Portés par une équipe de développeurs expérimentés, nous mettons un point d'honneur à offrir un environnement de jeu stable et innovant. Notre communauté bienveillante et nos systèmes de jeu uniques font d'Echo FA un serveur où roleplay rime avec créativité et respect.",
+      "join": "Nous rejoindre"
+    },
+    "Gallery": {
+      "sub": "Découvrir",
+      "title": {
+        "line1": "Galerie",
+        "line2": "Photos"
+      }
+    }
+  },
+  "Shop": {
+    "Panel": {
+      "login": "Se connecter",
+      "basket": "Panier",
+      "logged": "Vous êtes connecté.",
+      "logout": "Vous êtes déconnecté.",
+      "needLogin": "Vous devez être connecté pour ajouter un article au panier."
+    },
+    "Coins": {
+      "sub": "E-Coins",
+      "title": {
+        "line1": "Acheter des",
+        "line2": "coins"
+      },
+      "txt1": "Les E-Coins sont la monnaie premium d'Echo FA.",
+      "txt2": "Utilisez-les pour déverrouiller du contenu exclusif comme :",
+      "card1": "Accès à un arsenal d'armes spéciales.",
+      "card2": "Avantages VIP pour personnaliser votre expérience et améliorer votre gameplay.",
+      "card3": "Accès à des véhicules rares ou objets uniques dans le jeu.",
+      "card4": "Et bien plus encore !",
+      "offre": "Nos offres E-<strong>Coins</strong>"
+    },
+    "Item": {
+      "free": "Gratuit",
+      "add": "Ajouter au panier"
+    },
+    "VIP": {
+      "sub": "Abonnement",
+      "title": {
+        "line1": "Devenez",
+        "line2": "membre",
+        "line3": "VIP"
+      },
+      "txt1": "Débloquez des avantages exclusifs & rejoignez l’élite d’Echo FA !",
+      "card1": {
+        "title": "Salaire bonus automatique",
+        "txt": "+15% toutes les heures."
+      },
+      "card2": {
+        "title": "Bonus métiers Pôle Emploi",
+        "txt": "+15% d'argent en plus pour les activités professionnelles."
+      },
+      "card3": {
+        "title": "Réduction sur les véhicules",
+        "txt": "-10% sur tout le catalogue voitures en jeu."
+      },
+      "card4": {
+        "title": "Pose de props",
+        "txt": "Limité à 10 props maximum pour personnaliser ton environnement."
+      },
+      "card5": {
+        "title": "Armes exclusives",
+        "txt": "Accès à 2 modèles d'armes blanches spéciales."
+      },
+      "card6": {
+        "title": "Vitesse de récolte améliorée",
+        "txt": "Boost de +10% pour une productivité accrue."
+      },
+      "card7": {
+        "title": "Sac premium",
+        "txt": "Augmentation de l'inventaire avec +50 kg supplémentaires."
+      },
+      "card8": {
+        "title": "Avantages de mobilité",
+        "txt": "Achat possible d'un moyen de transport original comme un hoverboard ou un véhicule rare."
+      },
+      "card9": {
+        "title": "Rôle spécial sur Discord",
+        "txt": "Montre ton statut VIP à toute la communauté."
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+@import "styles/mixins";
+
+.hero {
+  overflow: hidden;
+
+  .japan {
+    font-size: calc(10px + 8 * (100vw - 320px) / 1080);
+    top: 13%;
+    left: 36%;
+    letter-spacing: 0.5em;
+
+    @include max(600px) {
+      top: 0;
+      font-size: 9px;
+    }
+  }
+}
+
+.palmier {
+  width: 55%;
+  top: 40vh;
+  left: 70%;
+
+  @include max(600px) {
+    left: 50%;
+  }
+}
+
+.wrapper {
+  width: var(--wrapper-header);
+  padding-top: calc(100px + 50 * (100vw - 320px) / 1080);
+  padding-bottom: calc(150px + 150 * (100vw - 320px) / 1080);
+
+  @include max(600px) {
+    padding-bottom: 0;
+  }
+}
+
+.illu {
+  position: absolute;
+  right: 28vw;
+  height: 100%;
+  z-index: 10;
+  pointer-events: none;
+  @include user-select;
+  display: flex;
+  justify-content: flex-end;
+  bottom: 6%;
+  overflow: hidden;
+
+  img {
+    width: auto;
+    height: 80%;
+    top: 20%;
+    right: 5%;
+  }
+
+  @include max(600px) {
+    position: relative;
+    right: 0;
+    margin-top: var(--main-padding);
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    img {
+      width: 900px;
+      min-width: 900px;
+    }
+  }
+}
+
+.content {
+  font-family: var(--font-primary);
+  font-weight: 800;
+  width: 50%;
+  left: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include max(600px) {
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.heading {
+  --size: calc(200px + 150 * (100vw - 320px) / 1080);
+  left: 0%;
+  padding-top: calc(80px + 40 * (100vw - 320px) / 1080);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  @include max(700px) {
+    left: -15%;
+  }
+
+  @include max(650px) {
+    left: -10%;
+  }
+
+  @include max(600px) {
+    text-align: center;
+    left: 0;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.sub {
+  left: calc(var(--size) * 0.29);
+  top: -0.5em;
+
+  @include max(600px) {
+    left: 0;
+    margin-bottom: 1.5em;
+  }
+}
+
+.title {
+  line-height: 0.85;
+  font-size: var(--size);
+
+  @include max(600px) {
+    line-height: 0.5;
+  }
+
+  .first {
+    font-size: 0.3em;
+    left: 0.95em;
+    color: var(--primary);
+    display: block;
+
+    @include max(600px) {
+      left: 0;
+      font-size: 0.4em;
+
+      .line1 {
+        display: none;
+      }
+    }
+
+    .line1 {
+      fill: var(--secondary);
+      width: 50%;
+      position: absolute;
+      left: 90%;
+      bottom: 20%;
+    }
+  }
+
+  strong {
+    font-weight: inherit;
+    display: block;
+
+    @include max(600px) {
+      display: inline-block;
+      font-size: 0.65em;
+    }
+  }
+
+  .gta {
+    display: block;
+    font-size: 0.5em;
+    left: 1em;
+    margin-top: -0.25em;
+    z-index: 5;
+
+    @include max(600px) {
+      display: inline-block;
+      left: 0;
+      font-size: 0.65em;
+      margin-left: 0.15em;
+    }
+
+    .rp {
+      position: absolute;
+      fill: var(--secondary);
+      width: 40%;
+      top: 0;
+      transform: translate(-42%, -95%);
+      z-index: -1;
+
+      @include max(600px) {
+        z-index: 5;
+        transform: translate(-70%, 130%);
+        width: 50%;
+      }
+    }
+  }
+}
+
+.btn {
+  left: 55%;
+  margin-top: calc(24px + 8 * (100vw - 320px) / 1080);
+  z-index: 10000;
+
+  @include max(700px) {
+    left: 40%;
+  }
+
+  @include max(600px) {
+    display: flex;
+    left: 0%;
+    margin-top: calc(42px + 24 * (100vw - 320px) / 1080);
+    justify-content: center;
+  }
+}
+
+.bg {
+  position: absolute;
+  inset: 0 0 10%;
+  overflow: hidden;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+  }
+
+  &::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--body-rgb), 0.95) 10%,
+      rgba(var(--body-rgb), 0)
+    );
+  }
+
+  &::after {
+    top: 50%;
+    background: linear-gradient(to top, var(--body), rgba(var(--body-rgb), 0));
+  }
+
+  & > div {
+    position: absolute;
+    inset: 0;
+    background: url("/img/home-hero-bg.webp") no-repeat center center / cover;
+    will-change: transform;
+  }
+}
