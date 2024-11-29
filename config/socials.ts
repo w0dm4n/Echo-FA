@@ -8,17 +8,22 @@ export interface SocialsProps extends NavLinkProps {
 export const SOCIALS: SocialsProps[] = [
   {
     label: "Discord",
-    href: "https://discord.com",
+    href: "https://discord.gg/vgSWak3t2d",
     icon: "discord"
   },
   {
     label: "TikTok",
-    href: "https://tiktok.com",
+    href: "https://www.tiktok.com/@echofafr",
     icon: "tiktok"
   },
   {
+    label: "Instagram",
+    href: "https://www.instagram.com/echofafr/",
+    icon: "instagram"
+  },
+  {
     label: "Youtube",
-    href: "https://youtube.com",
+    href: "https://www.youtube.com/@echofarp",
     icon: "youtube"
   },
   {
@@ -28,12 +33,12 @@ export const SOCIALS: SocialsProps[] = [
   },
   {
     label: "Twitch",
-    href: "https://twitch.com",
+    href: "https://www.twitch.tv/echofafr",
     icon: "twitch"
   },
   {
-    label: "Instagram",
-    href: "https://instagram.com",
-    icon: "instagram"
+    label: "Facebook",
+    href: "www.facebook.com/groups/echofafr/",
+    icon: "facebook"
   }
 ]
