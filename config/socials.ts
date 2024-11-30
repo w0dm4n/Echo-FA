@@ -38,7 +38,7 @@ export const SOCIALS: SocialsProps[] = [
   },
   {
     label: "Facebook",
-    href: "www.facebook.com/groups/echofafr/",
+    href: "https://www.facebook.com/groups/echofafr/",
     icon: "facebook"
   }
 ]
