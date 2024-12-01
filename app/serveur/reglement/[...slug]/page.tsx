@@ -3,6 +3,7 @@
 import { ReglementItemProps, reglement } from "@/config/reglement"
 import dynamic from "next/dynamic"
 import { redirect } from "next/navigation"
+import { List } from "../(components)/list"
 
 interface PageProps {
   params: { slug: string }
@@ -47,6 +48,7 @@ export default function Page({ params }: PageProps) {
   return (
     <>
       <h1 id={currentItem.slug}>{currentItem.title}</h1>
+      {currentItem.submenu && <List list={currentItem.submenu} />}
       <MdxContent />
     </>
   )

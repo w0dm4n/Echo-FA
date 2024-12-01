@@ -13,19 +13,19 @@ interface MenuItemProps extends ReglementItemProps {
   baseHref: string
 }
 
-const MenuItem = ({ baseHref, slug, title, submenu }: MenuItemProps) => {
-  const href = `${baseHref}/${slug}`
+const MenuItem = ({ baseHref, slug, title, href, submenu }: MenuItemProps) => {
+  const url = `${baseHref}/${slug}`
   const pathname = usePathname()
 
   return (
     <li>
-      <Link href={href} data-active={pathname === href}>
+      <Link href={href ? href : url} data-active={pathname === url}>
         {title}
       </Link>
       {submenu && (
         <ul>
           {submenu.map((subItem) => (
-            <MenuItem key={subItem.slug} baseHref={href} {...subItem} />
+            <MenuItem key={subItem.slug} baseHref={url} {...subItem} />
           ))}
         </ul>
       )}

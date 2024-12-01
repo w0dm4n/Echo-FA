@@ -146,5 +146,16 @@
         "txt": "Montre ton statut VIP à toute la communauté."
       }
     }
+  },
+  "Join": {
+    "sub": "Rejoignez-nous",
+    "title": {
+      "line1": "Rejoignez",
+      "line2": "Echo FA",
+      "line3": "maintenant"
+    },
+    "launch": "Launch FiveM",
+    "txt1": "Proinde die funestis interrogationibus praestituto imaginarius iudex equitum resedit magister.",
+    "txt2": "Proinde die funestis interrogationibus praestituto imaginarius iudex equitum resedit magister adhibitis aliis iam quae essent agenda praedoctis, et adsistebant hinc."
   }
 }

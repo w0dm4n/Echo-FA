@@ -4,6 +4,7 @@ export interface ReglementItemProps {
   icon: IconName
   title: string
   slug: string
+  href?: string
   submenu?: ReglementItemProps[]
 }
 
@@ -21,12 +22,14 @@ export const reglement: ReglementItemProps[] = [
       {
         icon: "police",
         title: "Gouvernement & Services publics",
-        slug: "gouvernement-services-publics"
+        slug: "gouvernement-services-publics",
+        href: "https://sites.google.com/view/reglement-echo-rp/r%C3%A8glement-l%C3%A9gal/gouvserv-public"
       },
       {
         icon: "building",
         title: "Entreprises",
-        slug: "entreprises"
+        slug: "entreprises",
+        href: "https://sites.google.com/view/reglement-echo-rp/r%C3%A8glement-l%C3%A9gal/entreprises"
       }
     ]
   },
@@ -34,28 +37,33 @@ export const reglement: ReglementItemProps[] = [
     icon: "unavailable",
     title: "Règlement illégal",
     slug: "reglement-illegal",
+    href: "https://sites.google.com/view/reglement-echo-rp/r%C3%A8glement-ill%C3%A9gal",
     submenu: [
       {
         icon: "taxi",
         title: "Convoi illégal",
-        slug: "convoi-illegal"
+        slug: "convoi-illegal",
+        href: "https://sites.google.com/view/reglement-echo-rp/r%C3%A8glement-ill%C3%A9gal/convoi-illegal"
       }
     ]
   },
   {
     icon: "island",
     title: "Règlement Cayo",
-    slug: "reglement-cayo"
+    slug: "reglement-cayo",
+    href: "https://sites.google.com/view/reglement-echo-rp/r%C3%A8glement-cayo"
   },
   {
     icon: "folderPlus",
     title: "Création de dossiers",
-    slug: "creation-dossiers"
+    slug: "creation-dossiers",
+    href: "https://sites.google.com/view/reglement-echo-rp/cr%C3%A9ation-dossier"
   },
   {
     icon: "prison",
     title: "Avertissements et sanctions",
-    slug: "avertissements-sanctions"
+    slug: "avertissements-sanctions",
+    href: "https://sites.google.com/view/reglement-echo-rp/avertissements-et-sanctions"
   }
 ]
 

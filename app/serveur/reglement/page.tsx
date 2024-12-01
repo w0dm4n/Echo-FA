@@ -1,29 +1,11 @@
-import { Icon } from "@/components/icon"
-import { Link } from "@/components/link"
-import { reglement, ReglementItemProps } from "@/config/reglement"
-import s from "./page.module.scss"
-
-const Card = ({ icon, title, slug, submenu }: ReglementItemProps) => (
-  <>
-    <li>
-      <Link href={`/serveur/reglement/${slug}`} className={s.card}>
-        <Icon icon={icon} />
-        <h2>{title}</h2>
-      </Link>
-    </li>
-    {submenu && submenu.map((item) => <Card key={item.slug} {...item} />)}
-  </>
-)
+import { reglement } from "@/config/reglement"
+import { List } from "./(components)/list"
 
 export default function Page() {
   return (
-    <div className={s.page}>
+    <div>
       <h1>Règlement</h1>
-      <ul className={s.list}>
-        {reglement.map((item) => (
-          <Card key={item.slug} {...item} />
-        ))}
-      </ul>
+      <List list={reglement} />
     </div>
   )
 }

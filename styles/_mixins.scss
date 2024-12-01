@@ -158,8 +158,8 @@ $responsiveNav: 1150px;
   -ms-user-select: $value;
 }
 
-@mixin border-gradient($gradient) {
-  border: 1px solid transparent;
+@mixin border-gradient($gradient, $width: 1px) {
+  border: $width solid transparent;
   background: $gradient border-box;
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;

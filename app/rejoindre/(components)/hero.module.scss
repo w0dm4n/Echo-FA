@@ -1,0 +1,247 @@
+@import "styles/mixins";
+
+.hero {
+  padding-top: calc(var(--main-top) / 1.25);
+
+  @include max(850px) {
+    padding-top: calc(150px + 10 * (100vw - 320px) / 1080);
+  }
+}
+
+.heading {
+  --size: calc(70px + 40 * (100vw - 320px) / 1080);
+  z-index: 10;
+
+  .sub {
+    left: calc(var(--size) * 0.55);
+  }
+
+  .title {
+    text-transform: uppercase;
+    font-size: var(--size);
+    font-family: var(--font-primary);
+    font-weight: 800;
+    margin-bottom: -0.25em;
+
+    span {
+      display: block;
+    }
+
+    .l1 {
+      color: var(--primary);
+    }
+
+    .l2 {
+      margin: calc(var(--size) * -0.45) 0 calc(var(--size) * -0.25);
+      z-index: 5;
+
+      svg {
+        fill: var(--text-primary);
+        height: 1.65em;
+        left: calc(var(--size) * -0.65);
+      }
+    }
+
+    .l3 {
+      color: var(--secondary);
+      font-size: 0.95em;
+    }
+  }
+}
+
+.content {
+  margin: var(--main-padding) 0;
+  width: calc(400px + 100 * (100vw - 320px) / 1080);
+  max-width: 100%;
+  font-size: calc(14px + 1 * (100vw - 320px) / 1080);
+  color: var(--text-secondary);
+  line-height: 2;
+
+  & > * + * {
+    margin-top: calc(16px + 8 * (100vw - 320px) / 1080);
+  }
+}
+
+.bg {
+  position: absolute;
+  inset: 0 0 0;
+  overflow: hidden;
+  z-index: -1;
+  max-height: 100vh;
+  opacity: 0.5;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+  }
+
+  &::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(var(--body-rgb), 0.95) 10%,
+      rgba(var(--body-rgb), 0)
+    );
+  }
+
+  &::after {
+    top: 50%;
+    background: linear-gradient(to top, var(--body), rgba(var(--body-rgb), 0));
+  }
+
+  & > div {
+    position: absolute;
+    inset: 0;
+    background: url("/img/rejoindre-hero-bg.webp") no-repeat center center /
+      cover;
+    will-change: transform;
+  }
+}
+
+.right {
+  @include min(750px) {
+    position: absolute;
+    left: 45%;
+    top: 0;
+    width: 70%;
+  }
+}
+
+.img {
+  width: 100%;
+  @include mask(linear-gradient(to bottom, #000 0% 60%, transparent 100%));
+
+  @include max(900px) {
+    margin-top: 100px;
+  }
+}
+
+.launch {
+  --padding: 10px;
+  --padding-inside: calc(24px + 4 * (100vw - 320px) / 1080);
+  --size: calc(24px + 8 * (100vw - 320px) / 1080);
+  --gradient: linear-gradient(
+    to right,
+    var(--primary),
+    var(--tertiary),
+    var(--secondary),
+    var(--tertiary),
+    var(--primary)
+  );
+  transition: color var(--transition-link);
+  color: var(--body);
+  padding: var(--padding);
+  font-family: var(--font-primary);
+  text-transform: uppercase;
+  line-height: 0.95;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 20;
+  bottom: calc(24px + 24 * (100vw - 320px) / 1080);
+  font-size: var(--size);
+  font-weight: 700;
+  display: flex;
+  align-items: stretch;
+
+  @include max(900px) {
+    top: 0;
+    margin-left: calc(var(--main-padding) * -1);
+    bottom: auto;
+  }
+
+  @include max(750px) {
+    left: var(--main-padding);
+    transform: translateX(0);
+  }
+
+  &:hover {
+    color: var(--text-primary);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--bg-opacity-1);
+    @include backdrop(16px);
+    border-radius: var(--angle-radius);
+    box-shadow: var(--shadow-1), var(--shadow-2);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: calc(var(--padding) * 0.45);
+    @include border-gradient(var(--gradient), 2px);
+    border-radius: var(--angle-radius);
+    background-size: 200% 100%;
+    animation: border 2s linear infinite;
+
+    @keyframes border {
+      0% {
+        background-position: 0 0;
+      }
+      100% {
+        background-position: 200% 0;
+      }
+    }
+  }
+
+  span {
+    border-radius: var(--angle-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &Txt {
+    white-space: nowrap;
+    padding: calc(var(--padding-inside) / 2) var(--padding-inside);
+    padding-top: calc(var(--padding-inside) / 2 + 0.25em);
+    padding-right: calc(var(--padding-inside) * 2);
+    background-color: var(--secondary);
+    background: var(--gradient);
+    background-size: 300% 100%;
+    animation: background 4s linear infinite;
+
+    &Logo {
+      width: 2.5em;
+      margin: -0.5em 0 -0.4em 0.05em;
+      fill: currentColor;
+    }
+
+    @keyframes background {
+      0% {
+        background-position: 300% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+  }
+
+  &Icon {
+    padding: 0 var(--padding-inside);
+    z-index: 10;
+    overflow: hidden;
+    margin-left: calc(var(--padding-inside) * -1.5);
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--primary);
+      transform: skewX(calc(var(--angle-reverse) / 2));
+      transform-origin: bottom left;
+      z-index: 0;
+    }
+
+    svg {
+      z-index: 5;
+      left: calc(var(--padding-inside) * 0.3);
+    }
+  }
+}
