@@ -1,10 +1,5 @@
-import { Wrapper } from "@/components/kit"
-import s from "./page.module.scss"
+import { redirect } from "next/navigation"
 
 export default function Page() {
-  return (
-    <div className={s.boutique}>
-      <Wrapper></Wrapper>
-    </div>
-  )
+  redirect("/boutique/coins")
 }
