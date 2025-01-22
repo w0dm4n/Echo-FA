@@ -9,8 +9,25 @@ import { useGSAP } from "@gsap/react"
 import gsap from "gsap"
 import { useTranslations } from "next-intl"
 import Image from "next/image"
-import { Fragment, useRef } from "react"
+import { useRef } from "react"
 import s from "./gallery.module.scss"
+
+const Img = ({ id }: { id: number }) => {
+  return (
+    <div className={s.img}>
+      <Image
+        src={`/img/photos/echo-fa-serveur-fr-gta-rp-photo-in-game-${id}.png`}
+        alt={APP_NAME}
+        width={800}
+        height={450}
+        quality={100}
+        draggable={false}
+        sizes="(max-width: 500px) 350px, (max-width: 768px)  450px, (max-width: 900px) 550px, 667px"
+      />
+    </div>
+  )
+}
+
 export const Gallery = () => {
   const t = useTranslations("Home.Gallery")
   const galleryRef = useRef<HTMLDivElement>(null)
@@ -30,20 +47,6 @@ export const Gallery = () => {
       }
     })
   })
-
-  const placeholder = (
-    <div className={s.img}>
-      <Image
-        src="/img/exemple.webp"
-        alt={APP_NAME}
-        width={800}
-        height={450}
-        quality={100}
-        draggable={false}
-        sizes="(max-width: 500px) 350px, (max-width: 768px)  450px, (max-width: 900px) 550px, 667px"
-      />
-    </div>
-  )
 
   return (
     <div className={s.gallery}>
@@ -88,13 +91,13 @@ export const Gallery = () => {
         </div>
         <div className={s.right}>
           <Marquee direction="up">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <Fragment key={i}>{placeholder}</Fragment>
+            {Array.from({ length: 10 }, (_, i) => (
+              <Img key={i + 1} id={i + 1} />
             ))}
           </Marquee>
           <Marquee direction="down">
-            {Array.from({ length: 10 }).map((_, i) => (
-              <Fragment key={i}>{placeholder}</Fragment>
+            {Array.from({ length: 9 }, (_, i) => (
+              <Img key={i + 11} id={i + 11} />
             ))}
           </Marquee>
         </div>
