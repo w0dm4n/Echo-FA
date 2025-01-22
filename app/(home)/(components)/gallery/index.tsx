@@ -90,12 +90,12 @@ export const Gallery = () => {
           />
         </div>
         <div className={s.right}>
-          <Marquee direction="up">
+          <Marquee direction="up" className={s.marquee}>
             {Array.from({ length: 10 }, (_, i) => (
               <Img key={i + 1} id={i + 1} />
             ))}
           </Marquee>
-          <Marquee direction="down">
+          <Marquee direction="down" className={s.marquee}>
             {Array.from({ length: 9 }, (_, i) => (
               <Img key={i + 11} id={i + 11} />
             ))}

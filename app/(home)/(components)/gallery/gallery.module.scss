@@ -172,6 +172,15 @@ $responsive: 1084px;
     )
   );
 
+  .marquee {
+    flex: 1;
+
+    & > * {
+      flex: 1;
+      width: 100% !important;
+    }
+  }
+
   @include max(1400px) {
     right: 3%;
   }
