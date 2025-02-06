@@ -41,5 +41,10 @@ export const coinsBonus: CoinsBonus = {
     newAmount: 2800,
     bonus: 40,
     amount: 2000
+  },
+  6670127: {
+    newAmount: 8000,
+    bonus: 60,
+    amount: 5000
   }
 }
