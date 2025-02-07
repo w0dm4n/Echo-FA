@@ -162,7 +162,19 @@ export const useBasketStore = create<BasketStore>((set, get) => ({
         )
       }
     } catch (error) {
-      console.error("Erreur lors de la récupération du panier:", error)
+      await removeBasketId()
+        .finally(() =>
+          set({
+            complete: true,
+            logged: false,
+            basketId: undefined,
+            basket: undefined,
+            authUrl: undefined
+          })
+        )
+        .catch((error) =>
+          console.error("Erreur lors de la récupération du panier:", error)
+        )
     } finally {
       setLoading(false)
     }
@@ -170,7 +182,9 @@ export const useBasketStore = create<BasketStore>((set, get) => ({
 
   createNewBasket: async () => {
     const { updateTotal, setLoading } = get()
+
     setLoading(true)
+
     try {
       const response = await fetch("/api/createNewBasket", {
         method: "POST",

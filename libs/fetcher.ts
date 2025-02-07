@@ -7,7 +7,7 @@ export const fetcher = async <T = any>(
   options: Record<string, any> = {}
 ): Promise<T | undefined> => {
   try {
-    console.log("CALL-", `${baseUrl}${url}`)
+    // console.log("CALL-", `${baseUrl}${url}`)
     const response = await fetch(`${baseUrl}${url}`, {
       ...options,
       body: options.body ? JSON.stringify(options.body) : undefined,
