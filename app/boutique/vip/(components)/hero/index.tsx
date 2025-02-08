@@ -56,13 +56,13 @@ export const Hero = () => {
     },
     {
       icon: "moto",
-      title: t("card9.title"),
+      title: t("card8.title"),
       txt: t("card8.txt")
     },
     {
       icon: "discord",
       title: t("card9.title"),
-      txt: t("card8.txt")
+      txt: t("card9.txt")
     }
   ]
 
