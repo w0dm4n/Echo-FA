@@ -10,7 +10,12 @@ export const fetcher = async <T = any>(
     // console.log("CALL-", `${baseUrl}${url}`)
     const response = await fetch(`${baseUrl}${url}`, {
       ...options,
-      body: options.body ? JSON.stringify(options.body) : undefined,
+      body: options.body
+        ? JSON.stringify({
+            ...options.body,
+            country: "FR"
+          })
+        : undefined,
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json; charset=UTF8",
